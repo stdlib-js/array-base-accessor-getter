@@ -38,12 +38,12 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/array/base/accessor-getter"
-click B href "https://github.com/stdlib-js/array-base-accessor-getter/tree/main"
-click C href "https://github.com/stdlib-js/array-base-accessor-getter/tree/production"
-click D href "https://github.com/stdlib-js/array-base-accessor-getter/tree/esm"
-click E href "https://github.com/stdlib-js/array-base-accessor-getter/tree/deno"
-click F href "https://github.com/stdlib-js/array-base-accessor-getter/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/array/base/accessor-getter"
+%% click B href "https://github.com/stdlib-js/array-base-accessor-getter/tree/main"
+%% click C href "https://github.com/stdlib-js/array-base-accessor-getter/tree/production"
+%% click D href "https://github.com/stdlib-js/array-base-accessor-getter/tree/esm"
+%% click E href "https://github.com/stdlib-js/array-base-accessor-getter/tree/deno"
+%% click F href "https://github.com/stdlib-js/array-base-accessor-getter/tree/umd"
 ```
 
 [stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/array/base/accessor-getter
