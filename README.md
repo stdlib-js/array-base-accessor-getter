@@ -18,6 +18,17 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # accessorGetter
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
@@ -34,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-accessor-getter
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@deno/mod.js';
+var accessorGetter = require( '@stdlib/array-base-accessor-getter' );
 ```
 
 #### accessorGetter( dtype )
@@ -49,9 +76,9 @@ import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-acc
 Returns an accessor function for retrieving an element from an array-like object supporting the get/set protocol.
 
 ```javascript
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+var Complex64Array = require( '@stdlib/array-complex64' );
+var realf = require( '@stdlib/complex-realf' );
+var imagf = require( '@stdlib/complex-imagf' );
 
 var arr = new Complex64Array( [ 1, 2, 3, 4 ] );
 
@@ -100,11 +127,11 @@ The returned accessor function accepts the following arguments:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@deno/mod.js';
-import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@deno/mod.js';
-import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtype@deno/mod.js';
-import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@deno/mod.js';
+var Complex128Array = require( '@stdlib/array-complex128' );
+var Complex64Array = require( '@stdlib/array-complex64' );
+var zeroTo = require( '@stdlib/array-base-zero-to' );
+var dtype = require( '@stdlib/array-dtype' );
+var accessorGetter = require( '@stdlib/array-base-accessor-getter' );
 
 var arr = new Complex128Array( zeroTo( 10 ) );
 var v = accessorGetter( dtype( arr ) )( arr, 2 );
@@ -150,7 +177,7 @@ console.log( v.toString() );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -180,8 +207,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/array-base-accessor-getter.svg
 [npm-url]: https://npmjs.org/package/@stdlib/array-base-accessor-getter
 
-[test-image]: https://github.com/stdlib-js/array-base-accessor-getter/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/array-base-accessor-getter/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/array-base-accessor-getter/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/array-base-accessor-getter/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/array-base-accessor-getter/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/array-base-accessor-getter?branch=main
@@ -210,7 +237,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-accessor-getter/main/LICENSE
 
-[@stdlib/array/dtypes]: https://github.com/stdlib-js/stdlib/tree/deno
+[@stdlib/array/dtypes]: https://github.com/stdlib-js/stdlib
 
 </section>
 
