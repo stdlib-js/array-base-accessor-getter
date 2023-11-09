@@ -237,7 +237,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-accessor-getter/main/LICENSE
 
-[@stdlib/array/dtypes]: https://github.com/stdlib-js/stdlib
+[@stdlib/array/dtypes]: https://github.com/stdlib-js/array-dtypes
 
 </section>
 
