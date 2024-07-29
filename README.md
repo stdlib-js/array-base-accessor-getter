@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@deno/mod.js';
+import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@v0.2.2-deno/mod.js';
 ```
 
 #### accessorGetter( dtype )
@@ -115,7 +115,7 @@ import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@deno/mod.js';
 import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtype@deno/mod.js';
-import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@deno/mod.js';
+import accessorGetter from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@v0.2.2-deno/mod.js';
 
 var arr = new Complex128Array( zeroTo( 10 ) );
 var v = accessorGetter( dtype( arr ) )( arr, 2 );
