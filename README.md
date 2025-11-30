@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-accessor-getter
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-accessorGetter = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var accessorGetter = require( 'path/to/vendor/umd/array-base-accessor-getter/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.accessorGetter;
-})();
-</script>
+var accessorGetter = require( '@stdlib/array-base-accessor-getter' );
 ```
 
 #### accessorGetter( dtype )
@@ -85,20 +79,12 @@ Returns an accessor function for retrieving an element from an array-like object
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var realf = require( '@stdlib/complex-float32-real' );
-var imagf = require( '@stdlib/complex-float32-imag' );
 
 var arr = new Complex64Array( [ 1, 2, 3, 4 ] );
 
 var get = accessorGetter( 'complex64' );
 var v = get( arr, 1 );
-// returns <Complex64>
-
-var re = realf( v );
-// returns 3.0
-
-var im = imagf( v );
-// returns 4.0
+// returns <Complex64>[ 3.0, 4.0 ]
 ```
 
 The returned accessor function accepts the following arguments:
@@ -134,36 +120,26 @@ The returned accessor function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtype@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-accessor-getter@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var Complex128Array = require( '@stdlib/array-complex128' );
+var Complex64Array = require( '@stdlib/array-complex64' );
+var zeroTo = require( '@stdlib/array-base-zero-to' );
+var dtype = require( '@stdlib/array-dtype' );
+var accessorGetter = require( '@stdlib/array-base-accessor-getter' );
 
 var arr = new Complex128Array( zeroTo( 10 ) );
 var v = accessorGetter( dtype( arr ) )( arr, 2 );
-// returns <Complex128>
+// returns <Complex128>[ 4.0, 5.0 ]
 
 console.log( v.toString() );
 // => '4 + 5i'
 
 arr = new Complex64Array( zeroTo( 10 ) );
 v = accessorGetter( dtype( arr ) )( arr, 4 );
-// returns <Complex64>
+// returns <Complex64>[ 8.0, 9.0 ]
 
 console.log( v.toString() );
 // => '8 + 9i'
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -258,7 +234,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-accessor-getter/main/LICENSE
 
-[@stdlib/array/dtypes]: https://github.com/stdlib-js/array-dtypes/tree/umd
+[@stdlib/array/dtypes]: https://github.com/stdlib-js/array-dtypes
 
 </section>
 
